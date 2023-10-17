@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 
 const connection = mysql.createConnection({
   host: 'localhost',
-  user: 'root',
+  user: 'arjun',
   password: '9909998189$gt',
   database: 'upload_data'
 });
@@ -21,7 +21,7 @@ connection.connect((err) => {
   console.log('Connected to MySQL Server!');
 });
 
-app.post('/upload-data', (req, res) => {
+app.post('/', (req, res) => {
   const data = req.body.data;
 
   data.forEach(row => {
